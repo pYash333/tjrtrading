@@ -73,15 +73,15 @@ h6 { font-size: ; color:; line-height:; } */
 
 /* main.main{position: relative;} */
 .hero {/*position: absolute;top: 0;left: 0;*/position: relative; width: 100%;height: 100vh;display: flex;align-items: flex-end; padding-bottom: 32px; overflow: hidden;}
-.hero:before{position: absolute;content:''; top: 0;left: 0;width: 100%;height: 70%; background: linear-gradient(#000000f2,#031009f2 15%,#031009cc 30%,#03100900);z-index: -2;}
+.hero:before{position: absolute;content:''; top: 0;left: 0;width: 100%;height: 70%; background: linear-gradient(#000000f2,#031009f2 25%,#031009cc 45%,#03100900);z-index: -2;}
 .hero:after{position: absolute;content:''; bottom: 0;left: 0;width: 100%;height: 100%; background: linear-gradient(to top, #000000f2,#031009f2 15%,#031009cc 30%,#03100900);z-index: -2;}
 .hero .bg-img { position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: -3; }
-.hero .bg-img img{object-fit: cover; object-position: center;width: 100%;height: 100%;}
+.hero .bg-img img{width: 100%;height: 100vh;}
 /* .hero .bg-img2 { position: absolute; height: 90%; bottom: 0; left: 50%; transform: translateX(-50%); z-index: -1; filter: drop-shadow(0 2px 8px #9696967a);} */
-.hero .bg-img2 { position: absolute; width: 100%;  bottom: 0; left: 50%; transform: translateX(-50%); z-index: -1; filter: drop-shadow(0 2px 8px #9696967a);display: flex; justify-content: center; align-items: center;}
-.hero .bg-img2 .image {  height: 90%; filter: drop-shadow(0 2px 8px #9696967a);}
-.hero .bg-img2:before { position: absolute; content: ''; width: 100%; height: 100%; background: linear-gradient(#03100900 51%,#031009f2 83%,#000 100%,#031009cc); z-index: 1; }
-.hero .bg-img2 .image img { height: 100vh; width: auto; object-fit: cover; }
+.hero .bg-img2 { height: 100%; position: absolute; width: 100%;  top: 0; left: 50%; transform: translateX(-50%); z-index: -1; filter: drop-shadow(0 2px 8px #9696967a);display: flex; justify-content: center; align-items: center;max-width: 100%;}
+.hero .bg-img2 .image {  height: 100%; filter: drop-shadow(0 2px 8px #9696967a);}
+.hero .bg-img2:before { position: absolute; content: ''; width: 100%; height: 100%; background: linear-gradient(#03100900 46%,#031009f2 83%,#000 100%,#031009cc); z-index: 1; }
+.hero .bg-img2 .image img { height: 90vh; width: auto; object-fit: cover; }
 /* div-block-65 .div-block-65-copy-copy div-block-59 linear-gradient(#03100900 51%,#031009f2 83%,#000 100%,#031009cc) */
 .hero .hero-content{max-width: 640px;width: 100%; margin: 0 auto;}
 .hero .hero-content .content { font-size: 20px; font-weight: 500; line-height: 140%; text-shadow: 0 1px 75px #0f4545bf;letter-spacing: -.03em; color: #e2e2e2;}
@@ -162,9 +162,10 @@ h6 { font-size: ; color:; line-height:; } */
 @media (max-width:991px){
     h1 { font-size: 44px; line-height: 52px; }
     .hero { height: 93vh; }
-    .hero .bg-img2{bottom: unset;top: 0;}
+    .hero:before { background: linear-gradient(#000000f2, #031009f2 23%, #031009cc 44%, #03100900); }
+    .hero .bg-img2{bottom: unset;top: -30px;}
     .hero .bg-img2 .image img {  height: 80%; }
-    .hero .bg-img2:before{bottom: -20px;}
+    .hero .bg-img2:before{bottom: -20px; background: linear-gradient(#03100900 36%,#031009f2 63%,#000 100%,#031009cc);}
     .hero .bg-img2:after {bottom: -200px; height: 200%; background: linear-gradient(#03100900 51%, #031009f2 83%, #000 100%, #031009cc); position: absolute; content: ''; width: 100%; }
     .hero-content .content em { font-size: 26px; }
     .page-content { padding: 0 40px 78px; }
@@ -176,8 +177,10 @@ h6 { font-size: ; color:; line-height:; } */
     h1 { font-size: 40px; line-height: 48px; }
     h3 { font-size: 35px; font-style: normal; }
     .hero { height: 98vh; padding-bottom: 24px;}
-    .hero .bg-img2:before{height: 290%;bottom: -260px;}
-    .hero .bg-img2:after {bottom: -380px;height: 260%;}
+    .hero .bg-img2:before{ bottom: -30px;}
+    .hero .bg-img2:after{background: linear-gradient(#03100900 51%, #031009f2 67%, #000 100%, #031009cc)}
+    .hero .bg-img2 .image{display: flex; justify-content: center;}
+    .hero .bg-img2 .image img{height: 83%;}
     header.header .inner{display: flex;justify-content: space-between;align-items: center;}
     .hero .hero-content h1 { margin-bottom: 12px; }
     .hero .hero-content .content { max-width: 501px; }
@@ -192,9 +195,11 @@ h6 { font-size: ; color:; line-height:; } */
     .page-content .content-box.first-box .image { max-width: 480px; }
     .title-part .post-title-text { font-size: 16px; line-height: 24px; }
 }
+@media (max-width:600px){
+    .hero .bg-img2 .image img { height: 60%; }
+    .hero .bg-img2:before{background: linear-gradient(#03100900 26%, #031009f2 49%, #000 100%, #031009cc);}
+}
 @media (max-width:575px){
-    .hero .bg-img2:before { bottom: -300px; }
-    .hero .bg-img2:after { bottom: -450px; }   
     .hero .hero-content .content strong { font-size: 22.4px; }
     .hero .hero-content .content span { font-size: 21px; }
     .hero .hero-content .content u { font-size: 20px; } 
@@ -202,10 +207,11 @@ h6 { font-size: ; color:; line-height:; } */
 @media (max-width:479px){
     body{letter-spacing: 0; font-size: 14px; line-height: 22px;}
     h1{font-size: 28px; font-weight: 700; line-height: 140%; letter-spacing: -1.5px;}
-    /* .button-1 a { font-size: 16px; border-radius: 16px; padding: 16px 32px; font-weight: 700; } */
     .hero { height: 90vh; }
-    .hero .bg-img2{height: 65%;top: 30px;}
-    .hero .bg-img2:before{bottom: -210px;}
+    .hero .bg-img2{height: 75%;top: 30px;}
+    .hero .bg-img2 .image img { height: 66%; }
+    .hero .bg-img2:after{bottom: -240px; background: linear-gradient(#03100900 31%, #031009f2 67%, #000 100%, #031009cc);}
+    
     .hero .hero-content .content span { font-size: 16px; line-height: 150%; } 
     .hero .hero-content .content { max-width: 401px; margin: 0 auto; font-size: 22.4px; }
     .hero .hero-content h1 { margin-top: 12px; }
@@ -230,5 +236,5 @@ h6 { font-size: ; color:; line-height:; } */
 }
 @media (max-width:478px){
     .button-1 a { font-size: 16px; border-radius: 16px; padding: 16px 32px; font-weight: 700; }
-    .hero .bg-img2:before{ bottom: -240px; }
+    .hero .bg-img2:after{ bottom: -300px; }
 }

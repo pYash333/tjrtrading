@@ -20,7 +20,7 @@ header.header .inner{max-width: 1136px;width: 100%;padding-top: 40px;}
 .footer .footer-content p{margin-bottom: 11.5px;}
 .footer .footer-content p:last-child{margin-bottom: 0;}
 
-@media (min-width:500px){
+@media (min-width:480px){
     header.header .top-header{display: none;}
 }
 
