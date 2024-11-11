@@ -1,0 +1,43 @@
+header.header { position: absolute; top: 0; left: 0; width: 100%; z-index: 3; }
+header.header .top-header{font-size: 12px;line-height: 100%;color: var(--white-color);padding-top: 16px;}
+header.header .top-header .headline-text { display: flex; align-items: center; justify-content: center; flex-wrap: wrap;}
+header.header .top-header .headline-text img { width: 18px; margin-right: 10px; }
+
+header.header .inner{max-width: 1136px;width: 100%;padding-top: 40px;}
+.logo {width: 128px;display: block;}
+#timer { display: flex; flex-wrap: wrap; }
+.timer-part { font-size: 28px; line-height: 100%; font-weight: 600; font-family: var(--tertiary-font); display: flex; flex-direction: column; align-items: center; width: 60px; height: 50px; color: var(--white-color);}
+.timer-part span{ font-size: 10px; font-weight: 400; line-height: 20px; letter-spacing: 5px; font-weight: 400;color: var(--white-color);}
+
+.footer{padding: 32px 0 24px; border-top: 1px solid #207064;}
+.footer .logo{margin: 0 auto;}
+
+.footer .footer-menu { margin-top: 16px; }
+.footer .footer-menu ul {display: flex;justify-content: center;gap: 32px;flex-wrap: wrap;padding: 0;margin: 0;list-style: none;}
+.footer .footer-menu ul li a { color: #959595; font-size: 13px; font-weight: 600; line-height: 150%; }
+.footer .footer-content { max-width: 1104px; width: 100%; font-size: 7px; line-height: 160%; margin: 20px auto 0; color: #959595;}
+.footer .footer-content p{margin-bottom: 13px;}
+
+@media (min-width:576px){
+    header.header .top-header{display: none;}
+}
+
+@media (max-width:991px){
+    
+}
+@media (max-width:767px){
+    .logo {width: 100px;}
+}
+@media (max-width:575px){
+
+    header.header .inner { padding-top: 24px; }
+    #timer{display: flex;justify-content: center;}
+    .timer-part { font-size: 20px; line-height: 26px; } 
+    .timer-part span { letter-spacing: 5px; font-size: 10px; font-weight: 700; }
+    
+    .logo {width: 80px;}
+    .footer { padding: 24px 0 16px; }
+    .footer .footer-menu ul li a { font-size: 12px; }
+    .footer .logo { width: 100px; }
+    .footer .footer-content { font-size: 6px; }
+}
