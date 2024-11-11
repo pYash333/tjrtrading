@@ -31,7 +31,7 @@ var x = setInterval(function () {
 }, 1000);
 
 if ($("#timer").length > 0) {
-  if (window.matchMedia("(max-width: 575px)").matches) {
+  if (window.matchMedia("(max-width: 479px)").matches) {
     $(function () {
       $(".hero .hero-content").prepend($("#timer"));
     });
