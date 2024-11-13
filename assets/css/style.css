@@ -100,10 +100,11 @@ h6 { font-size: ; color:; line-height:; } */
 .page-content .content-box.last-box .title-part .post-title-text { max-width: 464px; }
 .page-content .content-box.last-box .image{padding-bottom: 56px;}
 .page-content .content-box.first-box .image{max-width: 518px;width: 100%;}
-.page-content .content-box.first-box .image img{width: 100%;}
+.page-content .content-box.first-box .image img{width: 100%; border-radius: 4px;}
 .page-content .content-box + .content-box{border-top: 1px solid var(--primary-color);}
 .title-part .post-title-text { width: 100%; max-width: 474px; margin: 0 auto; font-weight: 400; }
 .page-content .content-box .image { margin: 48px auto 0; border-radius: 8px; width: fit-content; overflow: hidden; max-width: 640px; padding-bottom: 78px;}
+.page-content .content-box .image img{border-radius: 8px;}
 .page-content .content-bottom{margin-top: 40px;}
 .page-content .bottom-text { margin-top: 20px; }
 #hidden-content-1 { box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 24px 64px; width: 600px; background: black; border: 2px solid var(--primary-color); border-radius: 20px; }
